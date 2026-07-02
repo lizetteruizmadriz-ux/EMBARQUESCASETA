@@ -103,61 +103,59 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 .card-opt.ca.sel{border-color:var(--yellow);background:var(--yellow-bg);color:var(--yellow);box-shadow:0 0 20px rgba(245,168,0,.2)}
 .card-opt.ca.sel::after{content:'✓';position:absolute;top:8px;right:10px;font-size:14px;color:var(--yellow)}
 
-/* ══ RAMPAS — diseño premium ══ */
+/* ══ RAMPAS — diseño premium v7 ══ */
 .rampa-slot{display:flex;flex-direction:column;align-items:center;gap:5px}
-.rampa-mins{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.5px;height:14px;line-height:14px;display:flex;gap:5px}
+.rampa-mins{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.5px;height:16px;line-height:16px;display:flex;gap:5px}
 .rampa-mins .m-emb{color:var(--green)}
 .rampa-mins .m-rec{color:var(--tp-sky)}
 
-/* ── Botón Embarques ── */
+/* ── Botón Embarques — VERDE ── */
 .btn-solo-emb{
-  width:100px;height:90px;
-  border-radius:12px;
-  border:2px solid rgba(0,192,122,.45);
-  background:linear-gradient(160deg,rgba(0,192,122,.13) 0%,rgba(0,192,122,.05) 100%);
+  width:108px;height:96px;
+  border-radius:14px;
+  border:2.5px solid rgba(0,192,122,.6);
+  background:linear-gradient(145deg,rgba(0,192,122,.22) 0%,rgba(0,140,85,.1) 100%);
   cursor:pointer;
   transition:all .2s cubic-bezier(.25,.8,.25,1);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:5px;padding:0;position:relative;overflow:hidden;
-  box-shadow:0 2px 10px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
+  gap:0;padding:0;position:relative;overflow:hidden;
+  box-shadow:0 3px 14px rgba(0,0,0,.3), 0 0 0 0 rgba(0,192,122,0), inset 0 1px 0 rgba(255,255,255,.08);
 }
-.btn-solo-emb::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(160deg,rgba(0,192,122,.18),transparent 60%);
-  opacity:0;transition:opacity .2s;border-radius:10px;
+.btn-solo-emb::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:40%;
+  background:linear-gradient(to bottom,rgba(255,255,255,.07),transparent);
+  border-radius:12px 12px 0 0;pointer-events:none;
 }
-.btn-solo-emb:hover::before{opacity:1}
-.btn-solo-emb:hover{
-  border-color:rgba(0,192,122,.8);
-  box-shadow:0 4px 18px rgba(0,192,122,.25), inset 0 1px 0 rgba(255,255,255,.08);
-  transform:translateY(-2px);
+.btn-solo-emb:hover:not(:has(.oc-emb)){
+  border-color:rgba(0,220,140,.9);
+  box-shadow:0 6px 22px rgba(0,192,122,.35), 0 0 0 3px rgba(0,192,122,.15), inset 0 1px 0 rgba(255,255,255,.1);
+  transform:translateY(-3px) scale(1.02);
 }
-.btn-solo-emb:active{transform:translateY(0);box-shadow:0 1px 6px rgba(0,0,0,.3)}
+.btn-solo-emb:active{transform:translateY(0) scale(.98)}
 
-/* ── Botón Recibo ── */
+/* ── Botón Recibo — AZUL ── */
 .btn-solo-rec{
-  width:100px;height:90px;
-  border-radius:12px;
-  border:2px solid rgba(0,91,170,.5);
-  background:linear-gradient(160deg,rgba(0,91,170,.18) 0%,rgba(0,91,170,.07) 100%);
+  width:108px;height:96px;
+  border-radius:14px;
+  border:2.5px solid rgba(0,133,202,.6);
+  background:linear-gradient(145deg,rgba(0,133,202,.25) 0%,rgba(0,60,130,.12) 100%);
   cursor:pointer;
   transition:all .2s cubic-bezier(.25,.8,.25,1);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:5px;padding:0;position:relative;overflow:hidden;
-  box-shadow:0 2px 10px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
+  gap:0;padding:0;position:relative;overflow:hidden;
+  box-shadow:0 3px 14px rgba(0,0,0,.3), 0 0 0 0 rgba(0,133,202,0), inset 0 1px 0 rgba(255,255,255,.08);
 }
-.btn-solo-rec::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(160deg,rgba(0,133,202,.22),transparent 60%);
-  opacity:0;transition:opacity .2s;border-radius:10px;
+.btn-solo-rec::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:40%;
+  background:linear-gradient(to bottom,rgba(255,255,255,.07),transparent);
+  border-radius:12px 12px 0 0;pointer-events:none;
 }
-.btn-solo-rec:hover::before{opacity:1}
-.btn-solo-rec:hover{
-  border-color:rgba(0,133,202,.9);
-  box-shadow:0 4px 18px rgba(0,91,170,.3), inset 0 1px 0 rgba(255,255,255,.08);
-  transform:translateY(-2px);
+.btn-solo-rec:hover:not(:has(.oc-rec)){
+  border-color:rgba(64,180,229,.95);
+  box-shadow:0 6px 22px rgba(0,133,202,.4), 0 0 0 3px rgba(0,133,202,.18), inset 0 1px 0 rgba(255,255,255,.1);
+  transform:translateY(-3px) scale(1.02);
 }
-.btn-solo-rec:active{transform:translateY(0);box-shadow:0 1px 6px rgba(0,0,0,.3)}
+.btn-solo-rec:active{transform:translateY(0) scale(.98)}
 
 /* ── Btn dual legacy (compat) ── */
 .btn-dual{width:96px;height:66px;border-radius:var(--r);border:2px solid var(--border2);
@@ -167,70 +165,195 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 /* ── Contenido interno ── */
 .bdr-emb{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:4px;transition:all .2s;width:100%;height:100%;
+  gap:3px;transition:all .2s;width:100%;height:100%;
   color:var(--green);
 }
 .bdr-rec{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:4px;transition:all .2s;width:100%;height:100%;
-  color:rgba(100,190,255,.95);
+  gap:3px;transition:all .2s;width:100%;height:100%;
+  color:var(--accent2);
 }
-/* Número grande */
+/* Número de rampa */
 .bdr-lbl{
-  font-family:var(--mono);font-size:20px;font-weight:700;line-height:1;
-  letter-spacing:-.5px;
+  font-family:var(--mono);font-size:22px;font-weight:800;line-height:1;
+  letter-spacing:-1px;position:relative;z-index:1;
 }
 /* Etiqueta EMB / REC */
 .bdr-sub{
-  font-size:10px;font-weight:700;letter-spacing:2px;opacity:.7;line-height:1;
-  font-family:var(--font);
+  font-size:10px;font-weight:700;letter-spacing:2.5px;opacity:.8;line-height:1;
+  font-family:var(--font);position:relative;z-index:1;text-transform:uppercase;
 }
 
 /* ── Estado: libre ── */
-.bdr-emb.free{color:var(--green)}
-.bdr-rec.free{color:rgba(120,195,255,.95)}
+.bdr-emb.free{color:#00E898}
+.bdr-rec.free{color:#40C4FF}
 
 /* ── Estado: ocupada ── */
-.btn-solo-emb:has(.bdr-emb.oc-emb),
-.btn-solo-rec:has(.bdr-rec.oc-rec){
-  border-color:rgba(217,48,37,.6);
-  background:linear-gradient(160deg,rgba(217,48,37,.18) 0%,rgba(217,48,37,.07) 100%);
-  box-shadow:0 2px 10px rgba(217,48,37,.2);
+.btn-solo-emb:has(.bdr-emb.oc-emb){
+  border-color:rgba(217,48,37,.7);
+  background:linear-gradient(145deg,rgba(217,48,37,.25) 0%,rgba(140,20,10,.12) 100%);
+  box-shadow:0 3px 14px rgba(217,48,37,.25);
   cursor:default;
 }
-.bdr-emb.oc-emb{color:var(--red)}
-.bdr-rec.oc-rec{color:var(--red)}
+.btn-solo-rec:has(.bdr-rec.oc-rec){
+  border-color:rgba(217,48,37,.7);
+  background:linear-gradient(145deg,rgba(217,48,37,.25) 0%,rgba(140,20,10,.12) 100%);
+  box-shadow:0 3px 14px rgba(217,48,37,.25);
+  cursor:default;
+}
+.bdr-emb.oc-emb{color:#FF5555}
+.bdr-rec.oc-rec{color:#FF5555}
 
-/* ── Estado: SELECCIONADA — se nota oscuro y con glow ── */
+/* ── Estado: SELECCIONADA ── */
 .btn-solo-emb:has(.bdr-emb.sel-emb){
-  border-color:#00e090 !important;
-  background:linear-gradient(160deg,rgba(0,192,122,.55) 0%,rgba(0,150,90,.35) 100%) !important;
-  box-shadow:0 0 0 3px rgba(0,192,122,.4), 0 4px 22px rgba(0,192,122,.45) !important;
-  transform:translateY(-2px);
+  border-color:#00FF9D !important;
+  background:linear-gradient(145deg,rgba(0,192,122,.65) 0%,rgba(0,120,70,.5) 100%) !important;
+  box-shadow:0 0 0 3px rgba(0,192,122,.5), 0 6px 28px rgba(0,192,122,.55) !important;
+  transform:translateY(-3px) scale(1.04);
 }
-.bdr-emb.sel-emb{
-  color:#fff !important;
-}
-.bdr-emb.sel-emb .bdr-lbl{text-shadow:0 0 14px rgba(0,255,150,.6)}
+.bdr-emb.sel-emb{ color:#fff !important }
+.bdr-emb.sel-emb .bdr-lbl{ text-shadow:0 0 18px rgba(0,255,150,.7) }
 
 .btn-solo-rec:has(.bdr-rec.sel-rec){
-  border-color:#40c4ff !important;
-  background:linear-gradient(160deg,rgba(0,91,170,.65) 0%,rgba(0,60,130,.45) 100%) !important;
-  box-shadow:0 0 0 3px rgba(0,133,202,.45), 0 4px 22px rgba(0,91,170,.5) !important;
-  transform:translateY(-2px);
+  border-color:#40C4FF !important;
+  background:linear-gradient(145deg,rgba(0,133,202,.7) 0%,rgba(0,60,130,.55) 100%) !important;
+  box-shadow:0 0 0 3px rgba(0,133,202,.5), 0 6px 28px rgba(0,91,170,.6) !important;
+  transform:translateY(-3px) scale(1.04);
 }
-.bdr-rec.sel-rec{
-  color:#fff !important;
-}
-.bdr-rec.sel-rec .bdr-lbl{text-shadow:0 0 14px rgba(80,180,255,.7)}
+.bdr-rec.sel-rec{ color:#fff !important }
+.bdr-rec.sel-rec .bdr-lbl{ text-shadow:0 0 18px rgba(80,200,255,.7) }
 
-/* btn-r kept for backward compat (not used in grid anymore) */
+/* btn-r kept for backward compat */
 .btn-r{width:66px;height:66px;border-radius:var(--r);border:2px solid var(--border2);background:var(--surface);color:var(--text2);font-family:var(--mono);font-size:15px;font-weight:600;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center}
 .btn-r:hover:not(.occupied){border-color:var(--tp-sky);color:var(--accent2)}
 .btn-r.sel,.btn-r.free.sel,.btn-r.occupied.sel{background:var(--tp-blue) !important;border-color:var(--accent2) !important;color:#fff !important;box-shadow:0 0 0 3px rgba(0,133,202,.5), 0 0 18px rgba(0,91,170,.6) !important;}
 .btn-r.free{border-color:var(--green);background:rgba(0,192,122,.1);color:var(--green)}
 .btn-r.free:hover{background:rgba(0,192,122,.2);box-shadow:0 0 12px rgba(0,192,122,.3)}
 .btn-r.occupied{border-color:var(--red);background:rgba(217,48,37,.12);color:var(--red);cursor:default}
+
+/* ══ CHAT GENERAL — panel flotante ══ */
+.gchat-panel{
+  position:fixed;bottom:0;right:24px;width:340px;
+  background:var(--card);border:1.5px solid var(--border2);
+  border-bottom:none;border-radius:12px 12px 0 0;
+  box-shadow:0 -4px 30px rgba(0,0,0,.5);
+  z-index:150;display:flex;flex-direction:column;
+  transition:height .25s cubic-bezier(.4,0,.2,1);
+  overflow:hidden;
+}
+.gchat-panel.collapsed{height:48px}
+.gchat-panel.expanded{height:400px}
+.gchat-header{
+  display:flex;align-items:center;gap:8px;padding:0 14px;height:48px;
+  background:linear-gradient(90deg,var(--tp-navy),var(--card));
+  cursor:pointer;flex-shrink:0;border-bottom:1px solid var(--border);user-select:none;
+}
+.gchat-hdot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:gpulse 2s infinite}
+@keyframes gpulse{0%,100%{opacity:1;box-shadow:0 0 8px var(--green)}50%{opacity:.5;box-shadow:0 0 3px var(--green)}}
+.gchat-htitle{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text);flex:1}
+.gchat-hbadge{background:var(--red);color:#fff;font-size:10px;font-weight:700;border-radius:10px;padding:1px 7px;animation:pb .8s infinite alternate;min-width:18px;text-align:center;display:none}
+.gchat-htoggle{font-size:14px;color:var(--text3);transition:transform .25s}
+.gchat-panel.expanded .gchat-htoggle{transform:rotate(180deg)}
+.gchat-body{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.gchat-log{
+  flex:1;overflow-y:auto;padding:10px 12px;display:flex;flex-direction:column;gap:6px;
+  scroll-behavior:smooth;
+}
+.gchat-log::-webkit-scrollbar{width:4px}
+.gchat-log::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+.gchat-msg{max-width:90%;padding:8px 12px;border-radius:10px;font-size:12px;line-height:1.5;word-break:break-word;position:relative}
+.gchat-msg.from-sup{
+  align-self:flex-end;
+  background:linear-gradient(135deg,var(--tp-blue),var(--tp-sky));
+  color:#fff;border-radius:10px 10px 2px 10px;
+}
+.gchat-msg.from-vig{
+  align-self:flex-start;
+  background:var(--card2);border:1px solid var(--border2);
+  color:var(--text);border-radius:10px 10px 10px 2px;
+}
+.gchat-msg .gm-who{font-size:10px;font-weight:700;letter-spacing:.5px;margin-bottom:2px;opacity:.85}
+.gchat-msg.from-sup .gm-who{color:rgba(255,255,255,.85)}
+.gchat-msg.from-vig .gm-who{color:var(--green)}
+.gchat-msg .gm-time{font-size:9px;opacity:.5;margin-top:3px;text-align:right;font-family:var(--mono)}
+.gchat-msg.gchat-unread{box-shadow:0 0 0 2px rgba(0,192,122,.5)}
+.gchat-msg.from-vig.gchat-unread{box-shadow:0 0 0 2px rgba(0,192,122,.6)}
+.gchat-input-row{display:flex;gap:7px;padding:10px 12px;border-top:1px solid var(--border);flex-shrink:0}
+.gchat-inp{
+  flex:1;background:var(--surface);border:1px solid var(--border2);border-radius:8px;
+  color:var(--text);font-family:var(--font);font-size:12px;padding:8px 12px;outline:none;
+  resize:none;height:36px;line-height:1.4;transition:border .15s;
+}
+.gchat-inp:focus{border-color:var(--tp-sky)}
+.gchat-inp::placeholder{color:var(--text3)}
+.gchat-send{
+  width:36px;height:36px;border-radius:8px;border:none;
+  background:linear-gradient(135deg,var(--tp-blue),var(--tp-sky));
+  color:#fff;font-size:16px;cursor:pointer;flex-shrink:0;
+  transition:all .15s;display:flex;align-items:center;justify-content:center;
+}
+.gchat-send:hover{box-shadow:0 2px 12px rgba(0,133,202,.5);transform:scale(1.08)}
+.gchat-empty-msg{font-size:11px;color:var(--text3);text-align:center;padding:24px 0;letter-spacing:.3px}
+
+/* ── Barra de alarma Chat General — persiste hasta OK ── */
+.gchat-alarm-bar{
+  display:none;
+  position:fixed;top:54px;left:0;right:0;z-index:160;
+  background:linear-gradient(90deg,#0d2a0d,rgba(0,130,60,.95),#0d2a0d);
+  border-bottom:2px solid var(--green);
+  padding:10px 20px;
+  align-items:center;gap:14px;
+  animation:gcAlarmPulse 1s infinite alternate;
+  box-shadow:0 4px 20px rgba(0,192,122,.4);
+}
+.gchat-alarm-bar.show{display:flex}
+@keyframes gcAlarmPulse{
+  from{background:linear-gradient(90deg,#0d2a0d,rgba(0,130,60,.95),#0d2a0d);box-shadow:0 4px 20px rgba(0,192,122,.4)}
+  to{background:linear-gradient(90deg,#0a2010,rgba(0,160,80,.98),#0a2010);box-shadow:0 4px 30px rgba(0,192,122,.7)}
+}
+.gchat-alarm-icon{font-size:22px;animation:shake .4s infinite}
+@keyframes shake{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+.gchat-alarm-text{flex:1;font-size:13px;font-weight:700;color:#fff;letter-spacing:.3px;line-height:1.4}
+.gchat-alarm-who{font-size:11px;color:rgba(0,255,150,.8);font-weight:600}
+.gchat-alarm-ok{
+  padding:9px 20px;border-radius:8px;border:2px solid var(--green);
+  background:rgba(0,192,122,.25);color:#00FF9D;
+  font-size:12px;font-weight:800;letter-spacing:1px;cursor:pointer;
+  transition:all .15s;white-space:nowrap;
+}
+.gchat-alarm-ok:hover{background:rgba(0,192,122,.5);box-shadow:0 0 14px rgba(0,192,122,.5)}
+
+/* ── Chat en Espera Provisional ── */
+.espera-chat-section{margin-top:10px;border-top:1px solid var(--border);padding-top:10px}
+.espera-chat-lbl{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--orange);text-transform:uppercase;margin-bottom:7px;display:flex;align-items:center;gap:6px}
+.espera-chat-log{
+  max-height:140px;overflow-y:auto;display:flex;flex-direction:column;gap:4px;
+  padding:8px;background:var(--surface);border-radius:8px;border:1px solid var(--border);
+  margin-bottom:8px;scroll-behavior:smooth;
+}
+.espera-chat-log::-webkit-scrollbar{width:3px}
+.espera-chat-log::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+.espera-msg{font-size:11px;padding:5px 9px;border-radius:7px;word-break:break-word}
+.espera-msg.sup{background:rgba(0,91,170,.22);border-left:2px solid var(--tp-sky);color:var(--text)}
+.espera-msg.vig{background:rgba(0,192,122,.1);border-left:2px solid var(--green);color:var(--text)}
+.espera-msg .em-who{font-size:9px;font-weight:700;opacity:.75;display:block;margin-bottom:1px}
+.espera-msg.sup .em-who{color:var(--accent2)}
+.espera-msg.vig .em-who{color:var(--green)}
+.espera-msg .em-time{font-size:8px;opacity:.45;float:right;font-family:var(--mono)}
+.espera-input-row{display:flex;gap:6px}
+.espera-inp{
+  flex:1;background:var(--surface);border:1px solid var(--border2);border-radius:7px;
+  color:var(--text);font-family:var(--font);font-size:11px;padding:7px 10px;outline:none;
+  transition:border .15s;
+}
+.espera-inp:focus{border-color:var(--orange)}
+.espera-inp::placeholder{color:var(--text3)}
+.espera-send{
+  padding:7px 12px;border-radius:7px;border:none;
+  background:linear-gradient(135deg,#7a4500,var(--orange));
+  color:#fff;font-size:11px;font-weight:700;cursor:pointer;transition:all .15s;white-space:nowrap;
+}
+.espera-send:hover{box-shadow:0 2px 10px rgba(232,101,10,.4);transform:scale(1.05)}
 
 
 /* INPUTS */
@@ -275,40 +398,73 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 .scroll-feed::-webkit-scrollbar-track{background:var(--surface)}
 .scroll-feed::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
 
-.cc-icon-badge{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:6px 14px;font-weight:700;letter-spacing:.5px;border:2px solid transparent}
+.cc-icon-badge{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:8px 18px;font-weight:700;letter-spacing:.5px;border:2px solid transparent}
 .cc-icon-badge.tn{background:rgba(80,80,80,.25);border-color:#555;color:#ccc}
 .cc-icon-badge.ta{background:var(--yellow-bg);border-color:rgba(245,168,0,.5);color:var(--yellow)}
 .cc-icon-badge.ts{background:var(--orange-bg);border-color:rgba(232,101,10,.5);color:var(--orange)}
-.cc-big-icon{font-size:32px;line-height:1}
-.cc-badge-lbl{font-size:14px;font-family:var(--mono);font-weight:700;letter-spacing:1px}
-.cc-rampas{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.cc-big-icon{font-size:38px;line-height:1}
+.cc-badge-lbl{font-size:18px;font-family:var(--mono);font-weight:800;letter-spacing:1.5px}
+.cc-rampas{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
 /* CAMION CARD */
-.cc{background:var(--card2);border:1px solid var(--border2);border-radius:var(--r);padding:22px 24px;margin-bottom:16px;position:relative;overflow:hidden;transition:border .2s}
-.cc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:6px}
+.cc{background:var(--card2);border:1.5px solid var(--border2);border-radius:12px;padding:26px 28px;margin-bottom:18px;position:relative;overflow:hidden;transition:border .2s}
+.cc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:7px}
 .cc.tn::before{background:#666}
 .cc.ta::before{background:var(--yellow)}
 .cc.ts::before{background:var(--orange)}
 .cc.danger-card{border-color:rgba(217,48,37,.5)}
-.cc-top{display:flex;align-items:flex-start;gap:18px;margin-bottom:14px;flex-wrap:wrap}
-.cc-ord{font-family:var(--mono);font-size:36px;color:var(--accent2);font-weight:700;min-width:100px;letter-spacing:1px}
-.cc-meta{flex:1;min-width:180px}
+.cc-top{display:flex;align-items:flex-start;gap:20px;margin-bottom:16px;flex-wrap:wrap}
+.cc-ord{font-family:var(--mono);font-size:42px;color:var(--accent2);font-weight:800;min-width:110px;letter-spacing:1px}
+.cc-meta{flex:1;min-width:200px}
 .cc-row1{display:flex;gap:10px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
-.tag{padding:5px 16px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:.8px;font-family:var(--mono)}
+/* ── Tags de TIPO (Negra/Amarilla/Suciedad) ── */
+.tag{padding:6px 18px;border-radius:20px;font-size:14px;font-weight:700;letter-spacing:.8px;font-family:var(--mono)}
 .tag.tn{background:rgba(80,80,80,.25);color:#bbb;border:1px solid #555}
 .tag.ta{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,168,0,.4)}
 .tag.ts{background:var(--orange-bg);color:var(--orange);border:1px solid rgba(232,101,10,.4)}
-.tag.tr{background:rgba(0,133,202,.2);color:var(--accent2);border:1px solid rgba(0,133,202,.4);font-size:14px;padding:5px 18px}
-.tag.trec{background:rgba(0,60,130,.35);color:rgba(130,200,255,.95);border:1px solid rgba(0,133,202,.6);font-size:14px;padding:5px 18px}
-.cc-chofer{font-size:17px;color:var(--text);margin-bottom:5px;font-weight:500}
-.cc-sup{font-size:13px;color:var(--text3)}
+/* ── Tags de RAMPA — grandes y con color fuerte ── */
+.tag.tr{
+  background:linear-gradient(135deg,rgba(0,192,122,.3),rgba(0,150,80,.18));
+  color:#00FF9D;
+  border:2.5px solid rgba(0,192,122,.8);
+  font-size:20px;font-weight:900;
+  padding:10px 22px;
+  border-radius:12px;
+  letter-spacing:1px;
+  text-shadow:0 0 12px rgba(0,255,150,.5);
+  box-shadow:0 2px 14px rgba(0,192,122,.25), inset 0 1px 0 rgba(255,255,255,.07);
+}
+.tag.trec{
+  background:linear-gradient(135deg,rgba(0,133,202,.3),rgba(0,60,130,.2));
+  color:#40C4FF;
+  border:2.5px solid rgba(0,133,202,.85);
+  font-size:20px;font-weight:900;
+  padding:10px 22px;
+  border-radius:12px;
+  letter-spacing:1px;
+  text-shadow:0 0 12px rgba(64,196,255,.5);
+  box-shadow:0 2px 14px rgba(0,91,170,.3), inset 0 1px 0 rgba(255,255,255,.07);
+}
+.tag.espera{
+  background:rgba(232,101,10,.15);color:var(--orange);
+  border:2px solid rgba(232,101,10,.6);
+  font-size:16px;padding:8px 20px;border-radius:12px;
+  animation:bk .9s infinite alternate;
+  font-weight:800;
+}
+/* Mini-label debajo del número de rampa */
+.tag.tr::before{content:'EMBARQUES · ';font-size:10px;font-weight:600;letter-spacing:2px;opacity:.7;display:block;margin-bottom:2px;text-shadow:none}
+.tag.trec::before{content:'RECIBO · ';font-size:10px;font-weight:600;letter-spacing:2px;opacity:.7;display:block;margin-bottom:2px;text-shadow:none}
+/* ── Datos del chofer/sup — más grandes ── */
+.cc-chofer{font-size:20px;color:var(--text);margin-bottom:6px;font-weight:600}
+.cc-sup{font-size:14px;color:var(--text3)}
 .cc-timer-wrap{text-align:right;flex-shrink:0}
-.cc-timer{font-family:var(--mono);font-size:34px;font-weight:600;line-height:1}
+.cc-timer{font-family:var(--mono);font-size:40px;font-weight:700;line-height:1}
 .cc-timer.ok{color:var(--green)}
 .cc-timer.warn{color:var(--yellow)}
 .cc-timer.danger{color:var(--red);animation:bk .7s infinite alternate}
 @keyframes bk{from{opacity:1}to{opacity:.3}}
-.cc-tlbl{font-size:10px;letter-spacing:1.5px;color:var(--text3);text-transform:uppercase;margin-top:4px}
-.cc-foot{border-top:1px solid var(--border);margin-top:14px;padding-top:14px}
+.cc-tlbl{font-size:11px;letter-spacing:1.5px;color:var(--text3);text-transform:uppercase;margin-top:6px}
+.cc-foot{border-top:1px solid var(--border);margin-top:16px;padding-top:16px}
 /* Chat bubbles */
 .chat-log{max-height:160px;overflow-y:auto;margin-bottom:10px;display:flex;flex-direction:column;gap:5px;padding-right:2px}
 .chat-log::-webkit-scrollbar{width:3px}
@@ -542,11 +698,12 @@ canvas{display:block;width:100%!important;max-height:260px}
 .rampa-section-title .dot-e{width:7px;height:7px;border-radius:50%;display:inline-block}
 .rampa-section-title .dot-e.emb{background:var(--green)}
 .rampa-section-title .dot-e.rec{background:var(--tp-sky)}
-/* BIGGER card tags and info */
-.tag{padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.8px;font-family:var(--mono)}
-.cc-ord{font-family:var(--mono);font-size:28px;color:var(--accent2);font-weight:600;min-width:90px;letter-spacing:1px}
-.cc-chofer{font-size:15px;color:var(--text2);margin-bottom:4px}
-.cc-sup{font-size:12px;color:var(--text3)}
+/* BIGGER card tags and info — overrides anteriores actualizados */
+.tag{padding:6px 18px;border-radius:20px;font-size:14px;font-weight:700;letter-spacing:.8px;font-family:var(--mono)}
+.tag.espera{background:rgba(232,101,10,.15);color:var(--orange);border:2px solid rgba(232,101,10,.6);font-size:16px;padding:8px 20px;border-radius:12px;animation:bk .9s infinite alternate;font-weight:800}
+.cc-ord{font-family:var(--mono);font-size:42px;color:var(--accent2);font-weight:800;min-width:110px;letter-spacing:1px}
+.cc-chofer{font-size:20px;color:var(--text);margin-bottom:6px;font-weight:600}
+.cc-sup{font-size:14px;color:var(--text3)}
 .btn-sm.g{padding:9px 18px;font-size:13px}
 .btn-sello{padding:7px 14px;font-size:12px}
 @keyframes pd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.4)}}
@@ -679,6 +836,36 @@ canvas{display:block;width:100%!important;max-height:260px}
   </div>
 </div>
 
+<!-- ══ ALARMA CHAT GENERAL — persiste hasta OK ENTERADO ══ -->
+<div class="gchat-alarm-bar" id="gchat-alarm-bar">
+  <span class="gchat-alarm-icon">💬</span>
+  <div class="gchat-alarm-text">
+    <div class="gchat-alarm-who" id="gchat-alarm-who">—</div>
+    <div id="gchat-alarm-preview">—</div>
+  </div>
+  <button class="gchat-alarm-ok" onclick="okGChatAlarm()">✅ OK — ENTERADO</button>
+</div>
+
+<!-- ══════════ CHAT GENERAL FLOTANTE ══════════ -->
+<div class="gchat-panel collapsed" id="gchat-panel">
+  <div class="gchat-header" onclick="toggleGChat()">
+    <span class="gchat-hdot"></span>
+    <span class="gchat-htitle">💬 Chat General — Supervisores / Vigilantes</span>
+    <span class="gchat-hbadge" id="gchat-badge">0</span>
+    <span class="gchat-htoggle" id="gchat-toggle">▲</span>
+  </div>
+  <div class="gchat-body">
+    <div class="gchat-log" id="gchat-log">
+      <div class="gchat-empty-msg" id="gchat-empty">Sin mensajes aún. Escribe algo...</div>
+    </div>
+    <div class="gchat-input-row">
+      <input class="gchat-inp" id="gchat-inp" placeholder="Escribe un mensaje..." maxlength="300"
+        onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendGChat()}">
+      <button class="gchat-send" onclick="sendGChat()" title="Enviar">➤</button>
+    </div>
+  </div>
+</div>
+
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-logo">
@@ -770,22 +957,28 @@ canvas{display:block;width:100%!important;max-height:260px}
     <div style="display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap">
 
       <!-- ═══ PANEL EMBARQUES ═══ -->
-      <div style="background:rgba(0,192,122,.05);border:1.5px solid rgba(0,192,122,.25);border-radius:10px;padding:14px 16px;flex:1;min-width:280px">
-        <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:7px">
-          <span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block"></span>
-          EMBARQUES — RE1 a RE9
+      <div style="background:rgba(0,192,122,.07);border:2px solid rgba(0,192,122,.4);border-radius:12px;padding:16px 18px;flex:1;min-width:300px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,192,122,.25);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:var(--green);font-family:var(--mono)">RE</div>
+          <div>
+            <div style="font-size:13px;font-weight:800;letter-spacing:1.5px;color:var(--green);text-transform:uppercase">EMBARQUES</div>
+            <div style="font-size:10px;color:rgba(0,192,122,.65);letter-spacing:.5px">Rampas RE1 – RE9 · Color VERDE</div>
+          </div>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap" id="rampa-grid"></div>
       </div>
 
       <!-- ═══ SEPARADOR ═══ -->
-      <div style="width:1px;background:var(--border2);align-self:stretch;min-height:100px;margin:0 2px;opacity:.5"></div>
+      <div style="width:2px;background:linear-gradient(to bottom,transparent,var(--border2),transparent);align-self:stretch;min-height:100px;margin:0 4px"></div>
 
       <!-- ═══ PANEL RECIBO ═══ -->
-      <div style="background:rgba(0,91,170,.06);border:1.5px solid rgba(0,91,170,.3);border-radius:10px;padding:14px 16px;min-width:200px">
-        <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(100,180,255,.9);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:7px">
-          <span style="width:8px;height:8px;border-radius:50%;background:var(--tp-sky);display:inline-block"></span>
-          RECIBO — R3, R5 a R8
+      <div style="background:rgba(0,91,170,.08);border:2px solid rgba(0,91,170,.4);border-radius:12px;padding:16px 18px;min-width:220px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,91,170,.3);border:2px solid var(--tp-sky);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:var(--accent2);font-family:var(--mono)">R</div>
+          <div>
+            <div style="font-size:13px;font-weight:800;letter-spacing:1.5px;color:var(--accent2);text-transform:uppercase">RECIBO</div>
+            <div style="font-size:10px;color:rgba(64,180,229,.6);letter-spacing:.5px">Rampas R3, R5–R8 · Color AZUL</div>
+          </div>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap" id="rampa-recibo-grid-vis"></div>
       </div>
@@ -824,7 +1017,7 @@ canvas{display:block;width:100%!important;max-height:260px}
         <input class="inp" id="inp-chofer" placeholder="Nombre completo..." maxlength="60">
       </div>
       <div class="igrp">
-        <label>FICHA</label>
+        <label>Placas del Vehículo</label>
         <input class="inp" id="inp-placas" placeholder="ABC-1234..." maxlength="20" style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
       </div>
     </div>
@@ -879,6 +1072,34 @@ canvas{display:block;width:100%!important;max-height:260px}
     <span style="font-size:26px">🚨</span>
     <span class="alarm-txt" id="alarm-txt">NUEVO TRANSPORTE — REQUIERE ATENCIÓN</span>
     <button class="btn-sil" onclick="silenciar()">🔇 SILENCIAR</button>
+  </div>
+
+  <!-- GUÍA DE COLORES -->
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;padding:12px 16px;background:var(--card);border:1px solid var(--border2);border-radius:10px;align-items:center">
+    <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--text3);text-transform:uppercase;margin-right:4px">Guía de Rampas:</span>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(0,192,122,.1);border:1.5px solid rgba(0,192,122,.4);border-radius:8px;padding:7px 14px">
+      <span style="font-family:var(--mono);font-size:18px;font-weight:800;color:#00E898">RE</span>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:var(--green)">EMBARQUES</div>
+        <div style="font-size:10px;color:rgba(0,192,122,.65)">Rampas RE1 – RE9</div>
+      </div>
+      <span style="font-size:18px;margin-left:4px">🟢</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(0,91,170,.12);border:1.5px solid rgba(0,133,202,.45);border-radius:8px;padding:7px 14px">
+      <span style="font-family:var(--mono);font-size:18px;font-weight:800;color:#40C4FF">R</span>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:var(--accent2)">RECIBO</div>
+        <div style="font-size:10px;color:rgba(64,180,229,.65)">Rampas R3, R5–R8</div>
+      </div>
+      <span style="font-size:18px;margin-left:4px">🔵</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(217,48,37,.1);border:1.5px solid rgba(217,48,37,.4);border-radius:8px;padding:7px 14px">
+      <span style="font-family:var(--mono);font-size:18px;font-weight:800;color:#FF5555">🔴</span>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:var(--red)">OCUPADA</div>
+        <div style="font-size:10px;color:rgba(217,48,37,.7)">Camión asignado</div>
+      </div>
+    </div>
   </div>
 
   <div class="feed-top">
@@ -1058,6 +1279,8 @@ function init() {
   listenRegistros();
   listenAlarm();
   listenSello();
+  listenGChat();
+  listenGChatAlarm();
   listenMsgs();
   scheduleShiftLogouts();
   // Show login if switching to vigilancia tab
@@ -1216,21 +1439,60 @@ function renderEsperaList() {
   if (!section || !list) return;
   if (!enEspera.length) { section.style.display = 'none'; return; }
   section.style.display = 'block';
-  list.innerHTML = enEspera.sort((a,b) => a[1].ts - b[1].ts).map(([id, r]) => {
+
+  enEspera.sort((a,b) => a[1].ts - b[1].ts).forEach(([id, r]) => {
     const sec = Math.floor((Date.now() - r.ts) / 1000);
     const h = Math.floor(sec/3600), m = Math.floor((sec%3600)/60);
     const tStr = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
     const tc = h >= 4 ? 'var(--red)' : h >= 2 ? 'var(--yellow)' : 'var(--green)';
-    return `
-      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 14px;background:var(--surface);border:1px solid rgba(232,101,10,.3);border-radius:8px;margin-bottom:8px">
+
+    let card = document.getElementById(`espera-card-${id}`);
+    if (!card) {
+      card = document.createElement('div');
+      card.id = `espera-card-${id}`;
+      card.style.cssText = 'padding:12px 14px;background:var(--surface);border:1px solid rgba(232,101,10,.35);border-radius:10px;margin-bottom:10px';
+      list.appendChild(card);
+    }
+
+    const cmts = r.comentarios || [];
+    const chatHtml = cmts.length
+      ? cmts.map(c => {
+          const isVig = vigilantes.includes(c.quien);
+          return `<div class="espera-msg ${isVig ? 'vig' : 'sup'}">
+            <span class="em-who">${c.quien} <span class="em-time">${c.hora}</span></span>
+            ${c.texto}
+          </div>`;
+        }).join('')
+      : '<div style="font-size:10px;color:var(--text3);text-align:center;padding:8px 0">Sin mensajes de espera aún</div>';
+
+    card.innerHTML = `
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px">
         <span style="font-family:var(--mono);font-size:18px;color:var(--accent2);font-weight:700">#${r.orden}</span>
         <span style="font-size:13px;color:var(--text2)">${r.chofer}</span>
         <span style="font-family:var(--mono);font-size:12px;color:var(--text3)">${r.placas}</span>
         <span style="font-family:var(--mono);font-size:16px;font-weight:700;color:${tc}">${tStr}</span>
         <button class="btn-editar-rampa" onclick="abrirEditRampa('${id}')" style="margin-left:auto">✏ Asignar Rampa</button>
       </div>
+      <div class="espera-chat-section">
+        <div class="espera-chat-lbl">💬 Chat de Espera — Orden #${r.orden}</div>
+        <div class="espera-chat-log" id="espera-log-${id}">${chatHtml}</div>
+        <div class="espera-input-row">
+          <input class="espera-inp" id="espera-inp-${id}" placeholder="Mensaje sobre esta espera..." maxlength="200"
+            onkeydown="if(event.key==='Enter')sendEsperaChat('${id}')">
+          <button class="espera-send" onclick="sendEsperaChat('${id}')">Enviar</button>
+        </div>
+      </div>
     `;
-  }).join('');
+    // Scroll log
+    const log = document.getElementById(`espera-log-${id}`);
+    if (log) log.scrollTop = log.scrollHeight;
+  });
+
+  // Remove stale cards
+  list.querySelectorAll('[id^="espera-card-"]').forEach(card => {
+    const id = card.id.replace('espera-card-', '');
+    if (!registros[id] || registros[id].rampaEspera !== true) card.remove();
+  });
 }
 
 
@@ -1348,7 +1610,7 @@ window.okSalida = id => {
   document.getElementById('confirm-detail').innerHTML = `
     <div class="cd-row"><span class="cd-lbl">ORDEN</span><span class="cd-val">#${r.orden}</span></div>
     <div class="cd-row"><span class="cd-lbl">CHOFER</span><span class="cd-val">${r.chofer}</span></div>
-    <div class="cd-row"><span class="cd-lbl">FICHA</span><span class="cd-val">${r.placas}</span></div>
+    <div class="cd-row"><span class="cd-lbl">PLACAS</span><span class="cd-val">${r.placas}</span></div>
     <div class="cd-row"><span class="cd-lbl">RAMPAS</span><span class="cd-val">${rampaStr}</span></div>
     <div class="cd-row"><span class="cd-lbl">ENTRÓ</span><span class="cd-val">${r.fecha} ${r.hora}</span></div>
     <div class="cd-row"><span class="cd-lbl">SUPERVISOR</span><span class="cd-val">${r.supervisor}</span></div>
@@ -1933,6 +2195,31 @@ window.addCmt = id => {
     ts: Date.now()
   });
   box.value = '';
+};
+
+window.sendEsperaChat = id => {
+  const inp = document.getElementById(`espera-inp-${id}`);
+  if (!inp) return;
+  const txt = inp.value.trim();
+  if (!txt) return;
+  const quien = selSup || selVig;
+  const rol = selSup ? 'supervisor' : selVig ? 'vigilante' : null;
+  if (!quien) return toast('Selecciona supervisor o inicia sesión como vigilante', true);
+  const r = registros[id];
+  const cmts = Array.isArray(r.comentarios) ? [...r.comentarios] : [];
+  cmts.push({ quien, rol, texto: txt, hora: new Date().toTimeString().slice(0,8), ts: Date.now() });
+  update(ref(db, `regs/${id}`), { comentarios: cmts });
+  // Alarma al destino opuesto
+  set(ref(db, 'msgs'), {
+    active: true,
+    destino: rol === 'supervisor' ? 'vig' : 'sup',
+    desde: quien,
+    rol,
+    orden: r.orden || id,
+    texto: `⏸ [ESPERA] ${txt}`,
+    ts: Date.now()
+  });
+  inp.value = '';
 };
 
 // ── SELLO MAL ──
@@ -3042,9 +3329,211 @@ window.exportarExcel = () => {
     XLSX.utils.book_append_sheet(wb, wsR, 'Historial Rampas');
   }
 
+  // Hoja Chat General
+  if (gchatMsgs.length) {
+    const gRows = gchatMsgs.map(m => ({
+      'Fecha/Hora': new Date(m.ts).toLocaleString('es-MX'),
+      'Rol': m.rol === 'supervisor' ? 'Supervisor' : 'Vigilante',
+      'Quién': m.quien,
+      'Mensaje': m.texto
+    }));
+    const wsG = XLSX.utils.json_to_sheet(gRows);
+    wsG['!cols'] = [{ wch: 22 }, { wch: 14 }, { wch: 20 }, { wch: 60 }];
+    XLSX.utils.book_append_sheet(wb, wsG, 'Chat General');
+  }
+
   XLSX.writeFile(wb, `embarques_${new Date().toISOString().slice(0,10)}.xlsx`);
   toast('Archivo exportado ✓');
 };
+
+// ══ CHAT GENERAL — alarma persistente hasta OK ENTERADO ══
+// Firebase: /gchat (mensajes) + /gchatAlarm (estado de alarma activa)
+let gchatMsgs = [];
+let gchatOpen = false;
+let gchatLastReadTs = 0;       // último ts que este cliente ya leyó
+let gchatAlarmActive = false;  // hay alarma activa para mí ahora
+let gchatBeepLoop = null;      // intervalo del beep
+
+function listenGChat() {
+  onValue(ref(db, 'gchat'), snap => {
+    const data = snap.val();
+    gchatMsgs = data ? Object.values(data).sort((a,b) => a.ts - b.ts) : [];
+    renderGChat();
+    updateGChatBadge();
+  });
+}
+
+function listenGChatAlarm() {
+  onValue(ref(db, 'gchatAlarm'), snap => {
+    const d = snap.val();
+    if (!d) return;
+
+    const myRol = selSup ? 'supervisor' : selVig ? 'vigilante' : null;
+    if (!myRol) return;
+
+    // La alarma está activa y NO fue enviada por mí
+    if (d.active && d.rol !== myRol) {
+      // Solo arrancar si es un mensaje nuevo (ts mayor al que ya confirmé)
+      if (d.ts > gchatLastReadTs) {
+        showGChatAlarm(d);
+      }
+    } else {
+      // La alarma fue apagada (por OK del otro lado o porque era mía)
+      hideGChatAlarm();
+    }
+  });
+}
+
+function showGChatAlarm(d) {
+  if (gchatAlarmActive) return; // ya está sonando, no duplicar
+  gchatAlarmActive = true;
+
+  // Mostrar barra
+  const bar = document.getElementById('gchat-alarm-bar');
+  const who = document.getElementById('gchat-alarm-who');
+  const prev = document.getElementById('gchat-alarm-preview');
+  if (bar) bar.classList.add('show');
+  if (who) who.textContent = `💬 Mensaje de ${d.desde} (${d.rol === 'supervisor' ? 'Supervisor' : 'Vigilante'})`;
+  if (prev) prev.textContent = d.texto.length > 80 ? d.texto.slice(0,80) + '…' : d.texto;
+
+  // Badge en header del chat
+  updateGChatBadge();
+
+  // Beep que repite cada 4 seg hasta que den OK
+  playGChatBeep();
+  gchatBeepLoop = setInterval(() => {
+    if (gchatAlarmActive) playGChatBeep();
+    else stopGChatBeep();
+  }, 4000);
+
+  // Abrir el chat automáticamente si está cerrado
+  if (!gchatOpen) {
+    openGChat();
+  }
+}
+
+function hideGChatAlarm() {
+  gchatAlarmActive = false;
+  stopGChatBeep();
+  const bar = document.getElementById('gchat-alarm-bar');
+  if (bar) bar.classList.remove('show');
+}
+
+window.okGChatAlarm = () => {
+  const myRol = selSup ? 'supervisor' : selVig ? 'vigilante' : null;
+  gchatLastReadTs = Date.now();
+  hideGChatAlarm();
+  // Apagar la alarma en Firebase para que todos se enteren
+  set(ref(db, 'gchatAlarm'), { active: false, ts: Date.now(), okPor: selSup || selVig || '—', rol: myRol });
+  updateGChatBadge();
+};
+
+function updateGChatBadge() {
+  const myRol = selSup ? 'supervisor' : selVig ? 'vigilante' : null;
+  const unread = gchatMsgs.filter(m => m.ts > gchatLastReadTs && m.rol !== myRol).length;
+  const badge = document.getElementById('gchat-badge');
+  if (!badge) return;
+  if (unread > 0) {
+    badge.textContent = unread;
+    badge.style.display = 'inline-block';
+  } else {
+    badge.style.display = 'none';
+  }
+}
+
+function renderGChat() {
+  const log = document.getElementById('gchat-log');
+  if (!log) return;
+  if (!gchatMsgs.length) {
+    log.innerHTML = '<div class="gchat-empty-msg">Sin mensajes aún. Escribe algo...</div>';
+    return;
+  }
+  const myRol = selSup ? 'supervisor' : selVig ? 'vigilante' : null;
+  log.innerHTML = gchatMsgs.map(m => {
+    const isMine = m.rol === myRol;
+    const side = m.rol === 'supervisor' ? 'from-sup' : 'from-vig';
+    const hora = new Date(m.ts).toTimeString().slice(0,5);
+    const unread = !isMine && m.ts > gchatLastReadTs;
+    return `<div class="gchat-msg ${side}${unread ? ' gchat-unread' : ''}">
+      <div class="gm-who">${m.quien}</div>
+      ${m.texto}
+      <div class="gm-time">${hora}</div>
+    </div>`;
+  }).join('');
+  log.scrollTop = log.scrollHeight;
+}
+
+function openGChat() {
+  const panel = document.getElementById('gchat-panel');
+  gchatOpen = true;
+  panel.classList.add('expanded');
+  panel.classList.remove('collapsed');
+  setTimeout(() => {
+    const log = document.getElementById('gchat-log');
+    if (log) log.scrollTop = log.scrollHeight;
+    document.getElementById('gchat-inp')?.focus();
+  }, 280);
+}
+
+window.toggleGChat = () => {
+  const panel = document.getElementById('gchat-panel');
+  gchatOpen = !gchatOpen;
+  panel.classList.toggle('expanded', gchatOpen);
+  panel.classList.toggle('collapsed', !gchatOpen);
+  if (gchatOpen) {
+    setTimeout(() => {
+      const log = document.getElementById('gchat-log');
+      if (log) log.scrollTop = log.scrollHeight;
+      document.getElementById('gchat-inp')?.focus();
+    }, 280);
+  }
+};
+
+window.sendGChat = () => {
+  const inp = document.getElementById('gchat-inp');
+  if (!inp) return;
+  const txt = inp.value.trim();
+  if (!txt) return;
+  const quien = selSup || selVig;
+  const rol = selSup ? 'supervisor' : selVig ? 'vigilante' : null;
+  if (!quien) return toast('Selecciona supervisor o inicia sesión como vigilante', true);
+
+  const ts = Date.now();
+  push(ref(db, 'gchat'), { quien, rol, texto: txt, ts });
+
+  // Activar alarma en Firebase para el lado contrario
+  set(ref(db, 'gchatAlarm'), {
+    active: true,
+    desde: quien,
+    rol,
+    texto: txt,
+    ts
+  });
+
+  inp.value = '';
+};
+
+function playGChatBeep() {
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    // Doble beep amigable (diferente al beep de alarma principal)
+    [0, 0.18].forEach(delay => {
+      const osc = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      osc.connect(g); g.connect(audioCtx.destination);
+      osc.frequency.setValueAtTime(900, audioCtx.currentTime + delay);
+      osc.frequency.setValueAtTime(1200, audioCtx.currentTime + delay + 0.08);
+      g.gain.setValueAtTime(0.28, audioCtx.currentTime + delay);
+      g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + delay + 0.3);
+      osc.start(audioCtx.currentTime + delay);
+      osc.stop(audioCtx.currentTime + delay + 0.3);
+    });
+  } catch(e) {}
+}
+
+function stopGChatBeep() {
+  if (gchatBeepLoop) { clearInterval(gchatBeepLoop); gchatBeepLoop = null; }
+}
 
 // ── MISC ──
 window.limpiarActivos = () => {
